@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schema.student.json",
+  "title": "Student",
+  "description": "Defines a student entity",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "integer",
+      "description": "Unique identifier for student entity."
+    },
+    "name": {
+      "$ref": "#/$defs/name"
+    },
+    "yearLevel": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "exclusiveMaximum": 7
+    },
+    "campus": {
+      "enum": [
+        "Malolos",
+        "Makati",
+        "Mendiola"
+      ]
+    },
+    "memberships": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "Math Club",
+          "Science Club",
+          "English Club",
+          "Sports Club"
+        ]
+      },
+      "minItems": 2,
+      "maxItems": 3,
+      "uniqueItems": true
+    },
+    "subjects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "subjectCode": {
+            "type": "string"
+          },
+          "grade": {
+            "type": "number",
+            "multipleOf": 0.25,
+            "minimum": 1.00,
+            "maximum": 5.00
+          }
+        }
+      }
+    },
+    "contactDetails": {
+      "type": "object",
+      "properties": {
+        "emailAddress": {
+          "pattern": "^[\\w\\-\\.]+@([\\w-]+\\.)+[\\w-]{2,}$"
+        }
+      },
+      "required": [
+        "emailAddress"
+      ]
+    },
+    "yearGraduated": {
+      "type": "integer"
+    }
+  },
+  "dependentSchemas": {
+    "yearGraduated": {
+      "properties": {
+        "alumniId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "alumniId"
+      ]
+    }
+  },
+  "$defs": {
+    "name": {
+      "type": "object",
+      "description": "Person name",
+      "properties": {
+        "firstName": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 15
+        },
+        "middleName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": true,
+      "minProperties": 2,
+      "maxProperties": 3,
+      "dependentRequired": {
+        "firstName": [
+          "lastName"
+        ],
+        "lastName": [
+          "firstName"
+        ]
+      }
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "campus",
+    "memberships",
+    "subjects",
+    "contactDetails"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "./schema.student.json",
+  "id": 1,
+  "name": {
+    "firstName": "Juan",
+    "lastName": "Dela Cruz"
+  },
+  "yearLevel": 2,
+  "campus": "Malolos",
+  "memberships": [
+    "Math Club",
+    "Science Club"
+  ],
+  "subjects": [
+    {
+      "subjectCode": "PRIN143",
+      "grade": 1.75
+    },
+    {
+      "subjectCode": "PRIN143L",
+      "grade": 2.0
+    }
+  ],
+  "contactDetails": {
+    "emailAddress": "delacruz.juan@email.com"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "Membership": {
+    "LastName": "Doe",
+    "GivenName": "John",
+    "MiddleName": null,
+    "Birthdate": {
+      "Year": 1992,
+      "Month": 10,
+      "Day": 1
+    },
+    "Gender": "M",
+    "ContactDetails": {
+      "MobileNumber": "09171231234",
+      "EmailAddress": "john.doe@email.com"
+    },
+    "Interests": [
+      "Arcade",
+      "Real Time Strategy",
+      "First Person Shooter"
+    ]
+  },
+  "Platforms": [
+    {
+      "Platform": "PC",
+      "Enabled": true
+    },
+    {
+      "Platform": "Playstation",
+      "Enabled": true
+    },
+    {
+      "Platform": "XBox",
+      "Enabled": false
+    }
+  ]
+}

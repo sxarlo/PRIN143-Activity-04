@@ -1,0 +1,38 @@
+{
+  "playlist": [
+    {
+      "title": "Ang Huling El Bimbo",
+      "artist": "Eraserheads",
+      "album": "Cutterpillow",
+      "releaseYear": 1998,
+      "duration": {
+        "minutes": 7,
+        "seconds": 30
+      },
+      "statistics": {
+        "plays": 3456,
+        "likes": 2367,
+        "shares": 2562
+      },
+      "inDevice": true,
+      "platforms": ["Spotify", "AppleMusic"]
+    },
+    {
+      "title": "With a Smile",
+      "artist": "Eraserheads",
+      "album": "Circus",
+      "releaseYear": 1998,
+      "duration": {
+        "minutes": 4,
+        "seconds": 39
+      },
+      "statistics": {
+        "plays": 5021,
+        "likes": 4532,
+        "shares": 2561
+      },
+      "inDevice": null,
+      "platforms": ["Spotify", "AppleMusic"]
+    }
+  ]
+}
